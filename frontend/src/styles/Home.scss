@@ -1,0 +1,37 @@
+@import 'fonts';
+@import 'colors';
+
+.home-header,
+.searchbar-header {
+  text-align: center;
+}
+
+.home-header {
+  margin-top: 150px;
+
+  p {
+    font-size: 14px;
+    font-style: italic;
+  }
+}
+
+.searchbar-container {
+  margin-top: 50px;
+
+  li {
+    cursor: pointer;
+    list-style: none;
+    padding: 5px;
+    text-align: center;
+    color: $menu-inactive-color;
+  
+    &:hover {
+      color: $menu-hover-color;
+    }
+  }
+
+  p {
+    text-align: center;
+    color: $menu-inactive-color;
+  }
+}
