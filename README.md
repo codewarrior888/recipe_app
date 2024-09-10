@@ -1,39 +1,49 @@
 ## проект recipe_app на Django(backend)/React(frontend)
 
-Приложение для получения текущей погоды и прогноза по введенному городу.
-
-## Деплой на GitHub Pages
-
-Проект развернут и доступен по следующему адресу:
-[WeatherApp на GitHub Pages](https://codewarrior888.github.io/WeatherApp-main/)
+Приложение-каталог кулинарных рецептов.
 
 ## Установка и настройка проекта
 
 ### 1. Клонировать репозиторий на локальным компьютер
 ```bash
-git clone https://github.com/codewarrior888/WeatherApp-main.git
-gh repo clone codewarrior888/WeatherApp-main
+git clone git@github.com:codewarrior888/recipe_app.git
 ```
-### 2. Перейти в директорию проекта
-```bash
-cd WeatherApp-main
-```
-3. Установка зависимостей
-```bash
-npm install
-```
-4. Настроить API ключ для OpenWeatherMap
-Для использования API OpenWeatherMap необходимо зарегистрироваться и получить бесплатный API ключ.
-https://home.openweathermap.org/users/sign_up
 
-Создайте файл .env в корне проекта и добавьте в него ваш API ключ:
-REACT_APP_OPENWEATHERMAP_API_KEY=ваш_ключ_здесь
+### 2. Подключить виртальную среду.
+```bash
+python3 -m venv .venv
+```
+```bash
+source .venv/bin/activate
+```
+### 3. Перейти в директорию проекта (серверная часть):
+```bash
+cd backend/recipe_app
+```
 
-5. Локальный запуск
+### 4. Установить зависимости серверной стороны:
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Перейти в директорию проекта (клиентская часть):
+```bash
+cd frontend
+```
+
+### 6. Установить зависимости клиентской стороны:
+```bash
+npm i
+```
+
+### 7. Локальный запуск (запустить сервер из backend/recipe_app и клиента из frontend)
+```bash
+python manage.py runserver
+```
 ```bash
 npm run dev
 ```
-Проект будет доступен по адресу http://localhost:9000
+Проект будет доступен по адресу http://localhost:3000
 
 6. Сборка проекта
 ```bash
