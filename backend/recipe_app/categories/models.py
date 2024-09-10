@@ -22,6 +22,7 @@ class Category(models.Model):
         return f'/categories/{self.slug}/'
 
     class Meta:
+        app_label = "categories"
         verbose_name = "Category"
         verbose_name_plural = "Categories"
         ordering = ["name"]

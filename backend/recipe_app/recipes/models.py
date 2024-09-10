@@ -14,6 +14,9 @@ class Recipe(models.Model):
 
     category = models.ForeignKey(Category, related_name='recipes', on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.title
+
     @extend_schema_field(int)
     def get_absolute_url(self):
         return f"/recipes/{self.id}/"
@@ -28,3 +31,9 @@ class Recipe(models.Model):
         words = self.description.split(" ")
         preview = " ".join(words[:15])
         return f"{preview}..."
+    
+    class Meta:
+        app_label = "recipes"
+        verbose_name = "Recipe"
+        verbose_name_plural = "Recipes"
+        ordering = ["title"]
